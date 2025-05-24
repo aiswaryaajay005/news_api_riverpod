@@ -21,7 +21,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      final category = widget.category ?? 'everything';
+      final category = widget.category ?? 'latest';
       await ref.read(homeProvider.notifier).fetchNews(category: category);
     });
   }

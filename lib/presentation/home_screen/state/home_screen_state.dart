@@ -10,7 +10,7 @@ class HomeScreenState {
   final DateTime todayDate;
   Future<NewsResModel?> fetchNews({required String category}) async {
     final response = await ApiHelper.getData(
-      endpoint: "?q=$category&apiKey=${AppConfig.apiKey}",
+      endpoint: "everything?q=$category&apiKey=${AppConfig.apiKey}",
     );
     if (response != null) {
       NewsResModel resModel = newsResModelFromJson(response);

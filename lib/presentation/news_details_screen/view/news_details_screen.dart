@@ -56,7 +56,30 @@ class NewsDetailsScreen extends ConsumerWidget {
                 article.description ?? "preview",
                 style: TextStyle(color: AppColors.textSecondary, fontSize: 16),
               ),
-
+              SizedBox(height: 10),
+              Row(
+                children: [
+                  Text(
+                    article.publishedAt.toString() ?? "25-10-2023",
+                    style: TextStyle(
+                      color: AppColors.textSecondary,
+                      fontSize: 16,
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      article.author ?? "Maya",
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                      style: TextStyle(
+                        color: AppColors.textSecondary,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
               SizedBox(height: 10),
               Container(
                 height: 250,
